@@ -1,4 +1,3 @@
-// BinHub Application Logic Engine
 let currentUser = null;
 let userFiles = [];
 
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         checkPublicLinkOrRequireAuth();
     }
-
     loadFiles();
 });
 
@@ -32,11 +30,8 @@ function checkPublicLinkOrRequireAuth() {
         document.getElementById("app-dashboard").style.display = "none";
         document.getElementById("public-download-view").style.display = "block";
         
-        const fileName = urlParams.get('name') || "Arhivă / Fișier BinHub";
-        const fileSize = urlParams.get('size') || "Necunoscut";
-        
-        document.getElementById("dl-file-name").textContent = fileName;
-        document.getElementById("dl-file-size").textContent = "Mărime: " + fileSize;
+        document.getElementById("dl-file-name").textContent = urlParams.get('name') || "Arhivă / Fișier BinHub";
+        document.getElementById("dl-file-size").textContent = "Mărime: " + (urlParams.get('size') || "Necunoscut");
     } else {
         document.getElementById("auth-wall").style.display = "flex";
         document.getElementById("app-dashboard").style.display = "none";
@@ -92,7 +87,6 @@ function logout() {
 
 function handleFileUpload(files) {
     if (!files.length) return;
-    
     for (let file of files) {
         const fileData = {
             id: 'file_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
@@ -102,10 +96,9 @@ function handleFileUpload(files) {
         };
         userFiles.unshift(fileData);
     }
-
     saveFiles();
     renderFileList();
-    notify("🚀 Fișier încărcat și salvat!");
+    notify("🚀 Fișier încărcat și salvat cu succes!");
 }
 
 function removeFile(fileId) {
@@ -118,7 +111,7 @@ function removeFile(fileId) {
 function copyPublicLink(fileId, name, size) {
     const link = `${window.location.origin}${window.location.pathname}?file=${fileId}&name=${encodeURIComponent(name)}&size=${encodeURIComponent(size)}`;
     navigator.clipboard.writeText(link).then(() => {
-        notify("🔗 Link de descărcare copiat!");
+        notify("🔗 Link direct copiat în clipboard!");
     });
 }
 
@@ -128,9 +121,7 @@ function saveFiles() {
 
 function loadFiles() {
     const saved = localStorage.getItem("binhub_saved_files");
-    if (saved) {
-        userFiles = JSON.parse(saved);
-    }
+    if (saved) userFiles = JSON.parse(saved);
 }
 
 function renderFileList() {
