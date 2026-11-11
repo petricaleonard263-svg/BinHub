@@ -1,0 +1,32 @@
+/* BinHub Cyber-Neon Styling */
+:root {
+    --bg-dark: #090d16;
+    --card-bg: rgba(15, 23, 42, 0.75);
+    --accent-cyan: #00f2fe;
+    --accent-blue: #4facfe;
+    --accent-purple: #7f00ff;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-glow: rgba(0, 242, 254, 0.2);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid var(--accent-cyan);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+    color: #fff;
+    z-index: 1000;
+}
