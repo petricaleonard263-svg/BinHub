@@ -1,25 +1,28 @@
-// BinHub Application Logic
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("BinHub Engine Loaded. Version:", BinHubConfig.version);
+    console.log("BinHub Engine Active:", BinHubConfig.version);
 
-    // Dynamic UI Updates from Config
-    const logoEl = document.getElementById("brand-title");
-    if (logoEl) logoEl.textContent = BinHubConfig.branding.logoText;
+    const logo = document.getElementById("brand-name");
+    if (logo) logo.textContent = BinHubConfig.branding.logoText;
 
-    // Toast Notification Utility
-    window.showToast = function(message, type = "info") {
+    const badge = document.getElementById("brand-badge");
+    if (badge) badge.textContent = BinHubConfig.branding.badgeText;
+
+    window.notify = function(msg) {
         const toast = document.createElement("div");
-        toast.className = `toast ${type}`;
-        toast.innerHTML = `<span>${message}</span>`;
+        toast.className = "toast";
+        toast.innerText = msg;
         document.body.appendChild(toast);
         setTimeout(() => toast.remove(), 3000);
     };
 
-    // Global Action Handlers
-    window.copyShareLink = function(fileId) {
-        const link = `${window.location.origin}${window.location.pathname}?file=${fileId}`;
-        navigator.clipboard.writeText(link).then(() => {
-            showToast(" Link copiat cu succes!", "success");
-        });
+    window.triggerUpload = function() {
+        const fileInput = document.getElementById("file-input");
+        if (fileInput) fileInput.click();
+    };
+
+    window.handleFiles = function(files) {
+        if (!files.length) return;
+        const fileName = files[0].name;
+        notify(`Fișierul "${fileName}" este pregătit pentru generare link public!`);
     };
 });
