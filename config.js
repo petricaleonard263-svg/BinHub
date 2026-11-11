@@ -1,28 +1,19 @@
-// BinHub Cloud Configuration
 const BinHubConfig = {
     appName: "BinHub",
-    version: "2.5.0",
-    theme: "cyber-neon",
+    version: "3.0.0",
+    theme: "cyber-dark",
     githubRepo: "https://github.com/petricaleonard263-svg/BinHub",
-    rawBaseUrl: "https://raw.githubusercontent.com/petricaleonard263-svg/BinHub/main",
     
-    // Feature toggles
-    features: {
-        fileUpload: true,
-        zipSupport: true,
-        publicSharing: true,
-        deleteAction: true,
-        notifications: true
-    },
-    
-    // UI Branding & Colors
     branding: {
         logoText: "BinHub",
-        primaryColor: "#00f2fe",
-        secondaryColor: "#4facfe",
-        accentColor: "#7f00ff"
+        badgeText: "v3.0 Ultra Cloud",
+        accentCyan: "#00f2fe",
+        accentPurple: "#7f00ff"
     },
 
-    // Maximum file limits (MB)
-    maxFileSizeMB: 250
+    features: {
+        maxUploadMB: 500,
+        enableNotifications: true,
+        enableZipExtractPreview: true
+    }
 };
