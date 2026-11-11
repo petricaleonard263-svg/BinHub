@@ -1,15 +1,12 @@
 const BinHubConfig = {
     appName: "BinHub",
-    version: "3.5.0",
+    version: "4.0.0",
     theme: "cyber-dark",
     githubRepo: "https://github.com/petricaleonard263-svg/BinHub",
-    
     autoPasswordLength: 12,
-    useLocalStorageFallback: true,
-
     branding: {
         logoText: "BinHub",
-        badgeText: "v3.5 PRO",
+        badgeText: "v4.0 LAUNCHER PRO",
         accentCyan: "#00f2fe",
         accentPurple: "#7f00ff"
     }
