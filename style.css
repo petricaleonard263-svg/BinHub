@@ -11,12 +11,7 @@
     --text-muted: #94a3b8;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
 
 body {
     background-color: var(--bg-dark);
@@ -29,167 +24,88 @@ body {
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem 2rem;
-    border-bottom: 1px solid var(--panel-border);
-    backdrop-filter: blur(12px);
-    background: rgba(7, 9, 14, 0.8);
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 2rem; border-bottom: 1px solid var(--panel-border);
+    backdrop-filter: blur(12px); background: rgba(7, 9, 14, 0.8);
+    position: sticky; top: 0; z-index: 50;
 }
 
 .brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 800;
-    font-size: 1.5rem;
+    display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem;
     background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 
 .badge {
-    background: rgba(0, 242, 254, 0.1);
-    border: 1px solid rgba(0, 242, 254, 0.3);
-    color: var(--accent-cyan);
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: 99px;
+    background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3);
+    color: var(--accent-cyan); font-size: 0.75rem; padding: 2px 8px; border-radius: 99px;
 }
 
 .user-pill {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 6px 16px;
-    border-radius: 99px;
-    border: 1px solid var(--panel-border);
+    display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.05);
+    padding: 6px 16px; border-radius: 99px; border: 1px solid var(--panel-border);
 }
 
-.avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
+.avatar { width: 32px; height: 32px; border-radius: 50%; }
 
 .auth-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(7, 9, 14, 0.92);
-    backdrop-filter: blur(20px);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: fixed; inset: 0; background: rgba(7, 9, 14, 0.92);
+    backdrop-filter: blur(20px); z-index: 1000; display: flex;
+    align-items: center; justify-content: center;
 }
 
 .auth-box {
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(0, 242, 254, 0.2);
-    padding: 2.5rem;
-    border-radius: 24px;
-    width: 100%;
-    max-width: 420px;
-    text-align: center;
-    box-shadow: 0 0 50px rgba(0, 242, 254, 0.15);
+    background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(0, 242, 254, 0.2);
+    padding: 2.5rem; border-radius: 24px; width: 100%; max-width: 420px;
+    text-align: center; box-shadow: 0 0 50px rgba(0, 242, 254, 0.15);
 }
 
 .input-field {
-    width: 100%;
-    padding: 0.9rem 1.2rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--panel-border);
-    border-radius: 12px;
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    outline: none;
+    width: 100%; padding: 0.9rem 1.2rem; background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--panel-border); border-radius: 12px; color: #fff;
+    margin-bottom: 1rem; font-size: 0.95rem; outline: none;
 }
 
 .btn-google {
-    width: 100%;
-    background: #fff;
-    color: #000;
-    border: none;
-    padding: 0.9rem;
-    border-radius: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 1rem;
+    width: 100%; background: #fff; color: #000; border: none; padding: 0.9rem;
+    border-radius: 12px; font-weight: 700; cursor: pointer; display: flex;
+    align-items: center; justify-content: center; gap: 10px; margin-top: 1rem;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.8rem;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
+    color: #fff; border: none; padding: 0.8rem 1.8rem; border-radius: 12px;
+    font-weight: 600; cursor: pointer;
 }
 
 .btn-danger {
-    background: rgba(239, 68, 68, 0.15);
-    color: var(--accent-red);
-    border: 1px solid rgba(239, 68, 68, 0.3);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
+    background: rgba(239, 68, 68, 0.15); color: var(--accent-red);
+    border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.5rem 1rem;
+    border-radius: 8px; cursor: pointer;
 }
 
-.main-container {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-}
+.main-container { max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem; }
 
 .glass-card {
-    background: var(--panel-bg);
-    border: 1px solid var(--panel-border);
-    backdrop-filter: blur(16px);
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    margin-bottom: 2rem;
+    background: var(--panel-bg); border: 1px solid var(--panel-border);
+    backdrop-filter: blur(16px); border-radius: 20px; padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); margin-bottom: 2rem;
 }
 
 .upload-zone {
-    border: 2px dashed rgba(0, 242, 254, 0.3);
-    border-radius: 16px;
-    padding: 3.5rem 2rem;
-    text-align: center;
-    cursor: pointer;
+    border: 2px dashed rgba(0, 242, 254, 0.3); border-radius: 16px;
+    padding: 3.5rem 2rem; text-align: center; cursor: pointer;
     background: rgba(0, 242, 254, 0.02);
 }
 
 .file-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--panel-border);
-    border-radius: 14px;
-    margin-bottom: 0.8rem;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem; background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--panel-border); border-radius: 14px; margin-bottom: 0.8rem;
 }
 
 .toast {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background: #0f172a;
-    border: 1px solid var(--accent-cyan);
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 10px;
-    z-index: 2000;
+    position: fixed; bottom: 24px; right: 24px; background: #0f172a;
+    border: 1px solid var(--accent-cyan); color: #fff; padding: 12px 20px;
+    border-radius: 10px; z-index: 2000;
 }
